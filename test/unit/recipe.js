@@ -7,7 +7,9 @@ var expect    = require('chai').expect,
     Recipe   = require('../../app/models/recipe'),
     dbConnect = require('../../app/lib/mongodb'),
     cp        = require('child_process'),
-    db        = 'iron-chef-test';
+    db        = 'iron-chef-test',
+    o,
+    r;
 
 describe('Recipe', function(){
   before(function(done){
@@ -23,10 +25,9 @@ describe('Recipe', function(){
   });
 
   describe('constructor', function(){
-    it('should create a new Person object', function(){
-      var o = {name: 'new', photo: 'recipe.png', ingredients: [], instructions: 'cook'};
-      
-      var r = new Recipe(o);
+    it('should create a new recipe object', function(){
+      o = {name: 'new', photo: 'recipe.png', ingredients: [], instructions: 'cook'};
+      r = new Recipe(o);
       r.ingredients.push('a','b','c');
       expect(r).to.be.instanceof(Recipe);
       expect(r.name).to.equal('new');
@@ -44,5 +45,14 @@ describe('Recipe', function(){
       });
     });
   });
+
+  //describe('#remove', function(){
+    //it('should remove a recipe from the database', function(done){
+      //Recipe.all(function(err, recipes){
+        //expect(recipes).to.have.length(2);
+        //done();
+      //});
+    //});
+  //});
 });
 

@@ -1,12 +1,62 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-*{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
+#form form > * {
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+  background-color: yellow;
+
 }
 
-body{
-  background-image: url(/img/node.png);
-  background-size: cover;
+.container {
+  border: 1px solid black;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 15px;
+  overflow: hidden;
 }
+
+.container h1 {
+  margin: 0;
+  text-align: center;
+  background-color: lightblue;
+}
+
+.container p {
+  text-align: center;
+  margin: 2px;
+}
+
+.container {
+  background-color: lightyellow;
+}
+
+.container p {
+  margin: 5px;
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.container img {
+   width: 500px;
+}
+
+.container a {
+  font-size: 50px;
+  text-decoration: none;
+  color: orange;
+  margin: 185px;
+}
+
+.container a:hover {
+  color: blue;
+}
+
+.container li {
+  font-size: 25px;
+}
+.container p {
+  font-size: 20px;
+}
+
 

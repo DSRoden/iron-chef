@@ -1,0 +1,13 @@
+.container
+    h1= recipe.name
+    img(src=recipe.photo)
+    #ingredients
+      ul
+        each ingredient in recipe.ingredients
+         li= ingredient
+     #instructions
+       p=recipe.instructions
+       a(href='/#{recipe._id}') Delete
+         //-form(method='post', action='/#{recipe._id}')
+           //-input(type='hidden', name='_method', value='delete')
+           //-button(type='submit') Delete 

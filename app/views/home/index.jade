@@ -1,17 +1,20 @@
 extends ../shared/template
 block content
-  h2 Home Page!
-  each recipe in recipes 
-    table#recipes
-      thead
-        tr
-          th recipe.name
-          th recipe.photo
-      tbody
-        tr
-          each ingredient in recipe.ingredients
-          li ingredient
-          td recipe.instructions
+
+  #form 
+    #visibility
+      button#hide Hide Form
+      button#show Show Form
+    form(method='post', action='/')
+      input(name='name', type='text', placeholder= 'recipe name' autofocus=true)
+      input(name='photo', type='text', placeholder= 'url')
+      input(name='ingredients', type='text', placeholder='chickent, etc')
+      textarea(name='instructions')
+      button Add Recipe
+  #recipes
+    each recipe in recipes
+       include recipe
+
 
 
 block scripts

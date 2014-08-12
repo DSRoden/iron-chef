@@ -11,7 +11,10 @@ module.exports = function(app, express){
   app.use(bodyParser.urlencoded({extended:true}));
   app.use(methodOverride());
 
-  app.get('/', home.index);
+  app.get('/', home.all);
+  app.post('/', home.create);
+  //app.delete('/:id', home.remove);
+  app.get('/:id', home.remove);
 
   console.log('Routes Loaded');
 };
