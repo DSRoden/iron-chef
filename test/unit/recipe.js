@@ -24,8 +24,15 @@ describe('Recipe', function(){
 
   describe('constructor', function(){
     it('should create a new Person object', function(){
-      var r = new Recipe();
+      var o = {name: 'new', photo: 'recipe.png', ingredients: [], instructions: 'cook'};
+      
+      var r = new Recipe(o);
+      r.ingredients.push('a','b','c');
       expect(r).to.be.instanceof(Recipe);
+      expect(r.name).to.equal('new');
+      expect(r.photo).to.equal('recipe.png');
+      expect(r.ingredients).to.have.length(3);
+      expect(r.instructions).to.equal('cook');
     });
   });
 

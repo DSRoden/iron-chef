@@ -1,6 +1,18 @@
 extends ../shared/template
 block content
   h2 Home Page!
+  each recipe in recipes 
+    table#recipes
+      thead
+        tr
+          th recipe.name
+          th recipe.photo
+      tbody
+        tr
+          each ingredient in recipe.ingredients
+          li ingredient
+          td recipe.instructions
+
 
 block scripts
   script(src='/js/user/home.js')

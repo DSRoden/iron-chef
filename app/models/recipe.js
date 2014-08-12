@@ -1,6 +1,11 @@
 'use strict';
 
-function Recipe(){
+function Recipe(o){
+ this.name = o.name;
+ this.photo = o.photo;
+ this.ingredients = [];
+ this.instructions = o.instructions;
+
 }
 
 Object.defineProperty(Recipe, 'collection', {
