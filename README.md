@@ -1,6 +1,5 @@
 ## name of project
-### Code Badges
-build status icon
+[![Build Status](https://travis-ci.org/DSRoden/iron-chef.svg?branch=master)](https://travis-ci.org/DSRoden/iron-chef)
 coverage status icon
 
 ### About
