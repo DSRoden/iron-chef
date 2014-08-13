@@ -13,8 +13,8 @@ module.exports = function(app, express){
 
   app.get('/', home.all);
   app.post('/', home.create);
-  //app.delete('/:id', home.remove);
-  app.get('/:id', home.remove);
+  //app.get('/:id', home.remove);
+  app.delete('/recipes/:id', home.remove);
 
   console.log('Routes Loaded');
 };

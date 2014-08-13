@@ -4,10 +4,13 @@ var Mongo = require('mongodb');
 
 function Recipe(o){
 
-  this.name = o.name;
-  this.photo = o.photo;
-  this.ingredients = o.ingredients.split(',').map(function(i){return i.trim();});
-  this.instructions = o.instructions;
+  this.name = (!(o.name.trim().length))     ? 'no name' : o.name;
+  this.photo = (!o.photo)                   ? 'http://ruon.tv/wp-content/uploads/2014/02/default-image.png' : o.photo;
+  this.ingredients = o.ingredients          || 'cream, spice, salt';
+  this.ingredients = this.ingredients.split(',').map(function(i){return i.trim();});
+  this.instructions = (!o.instructions)     ? 'no instructions' : o.instructions;
+  this.created = new Date();
+  this.category =                             o.category;
 
 }
 
@@ -21,7 +24,8 @@ Recipe.create = function(o, cb){
 };
 
 Recipe.all = function(cb){
-  Recipe.collection.find().toArray(cb);
+  Recipe.collection.find().sort({created: -1}).toArray(cb);
+
 };
 
 Recipe.removeById = function(id, cb){
@@ -29,5 +33,7 @@ Recipe.removeById = function(id, cb){
   console.log(id);
   Recipe.collection.findAndRemove({_id:id},cb);
 };
+
+
 module.exports = Recipe;
 

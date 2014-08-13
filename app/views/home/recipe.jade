@@ -1,13 +1,15 @@
-.container
-    h1= recipe.name
-    img(src=recipe.photo)
-    #ingredients
-      ul
+.recipe(data-recipe-id=recipe._id.toString())
+    .photo(style='background-image:url(#{recipe.photo});') 
+      button.deleteButton.delete x
+    .name= recipe.name
+    .ingredients
+      ul#ingredients
         each ingredient in recipe.ingredients
-         li= ingredient
-     #instructions
-       p=recipe.instructions
-       a(href='/#{recipe._id}') Delete
+         li: a(href='#')= ingredient
+     .directions= recipe.instructions
+     .category= recipe.category
+       //-a(href='/#{recipe._id}') Delete
          //-form(method='post', action='/#{recipe._id}')
            //-input(type='hidden', name='_method', value='delete')
-           //-button(type='submit') Delete 
+           //-button(type='submit') Delete
+

@@ -1,19 +1,30 @@
 extends ../shared/template
 block content
 
-  #form 
+  #controls
     #visibility
-      button#hide Hide Form
-      button#show Show Form
+      button#hide.hideButton Hide Form
+      button#show.hideButton Show Form
     form(method='post', action='/')
+      select(name='category')
+        option(value="Vegetarian") vegetarian 
+        option(value="Carnivore") carnivore
+        option(value="Omnivore") omnivore
       input(name='name', type='text', placeholder= 'recipe name' autofocus=true)
       input(name='photo', type='text', placeholder= 'url')
       input(name='ingredients', type='text', placeholder='chickent, etc')
       textarea(name='instructions')
-      button Add Recipe
+      button.addRecipe.container Add Recipe
+
+  ul#categories
+    li: a(href='#') vegetarian
+    li: a(href='#') carnivore
+    li: a(href='#') omnivore
+  ul#showAll
+    li: a(href='#') show all
   #recipes
     each recipe in recipes
-       include recipe
+      include recipe
 
 
 

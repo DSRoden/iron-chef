@@ -26,9 +26,8 @@ describe('Recipe', function(){
 
   describe('constructor', function(){
     it('should create a new recipe object', function(){
-      o = {name: 'new', photo: 'recipe.png', ingredients: [], instructions: 'cook'};
+      o = {name: 'new', photo: 'recipe.png', ingredients: 'salt, pepper, spice', instructions: 'cook'};
       r = new Recipe(o);
-      r.ingredients.push('a','b','c');
       expect(r).to.be.instanceof(Recipe);
       expect(r.name).to.equal('new');
       expect(r.photo).to.equal('recipe.png');

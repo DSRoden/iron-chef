@@ -1,62 +1,154 @@
 
-#form form > * {
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  background-color: #EEEEEE;
+}
+
+header{
+  margin: 20px;
+}
+
+header h1{
+  font-size: 25px;
+}
+
+.recipe{
   display: inline-block;
   vertical-align: top;
-  margin: 5px;
-  background-color: yellow;
-
+  width: 250px;
+  border: 1px solid #111111;
+  border-radius: 5px;
+  margin: 20px;
+  background-color: #DDDDDD;
 }
 
-.container {
-  border: 1px solid black;
-  display: inline-block;
-  margin: 10px;
-  border-radius: 15px;
-  overflow: hidden;
+.recipe .photo{
+  position: relative;
+  height: 300px;
+  background-size: cover;
+  border-bottom: 1px solid #111111;
+  margin-bottom: 10px;
 }
 
-.container h1 {
-  margin: 0;
-  text-align: center;
+.recipe .photo button{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.recipe .name{
+  font-size: 20px;
+  color: #001F3F;
+  padding: 5px;
+}
+
+.recipe .directions, .recipe .ingredients{
+  padding: 5px;
+}
+
+.recipe .ingredients li{
+  position: relative;
+  left: 20px;
+}
+
+#controls{
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#visibility{
+  margin: 40px;
+}
+
+form{
+  margin: 20px;
+  padding: 10px;
+  display: block;
+}
+
+form input, form button, form textarea{
+  padding:10px;
+  margin: 8px;
+  width: 350px;
+  display: block;
+  vertical-align: top;
+}
+
+.category {
   background-color: lightblue;
 }
 
-.container p {
-  text-align: center;
-  margin: 2px;
-}
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
 
-.container {
-  background-color: lightyellow;
-}
+/*#form {*/
+  /*margin: 5px;*/
+/*}*/
 
-.container p {
-  margin: 5px;
-  background-color: #ccc;
-  border-radius: 10px;
-  padding: 10px;
-}
+/*form input, form button, form textarea{*/
+  /*padding: 10px;*/
+  /*width: 350px;*/
+  /*display: block;*/
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+/*}*/
 
-.container img {
-   width: 500px;
-}
 
-.container a {
-  font-size: 50px;
-  text-decoration: none;
-  color: orange;
-  margin: 185px;
-}
+/*.container {*/
+  /*font-family: 'Open Sans', sans-serif;*/
+  /*border: 1px solid black;*/
+  /*display: inline-block;*/
+  /*padding: 20px;*/
+  /*margin: 10px;*/
+  /*border-radius: 15px;*/
+  /*overflow: hidden;*/
+/*}*/
 
-.container a:hover {
-  color: blue;
-}
+/*.container h1 {*/
+  /*margin: 0;*/
+  /*text-align: center;*/
+  /*background-color: lightblue;*/
+/*}*/
 
-.container li {
-  font-size: 25px;
-}
-.container p {
-  font-size: 20px;
-}
+/*.container p {*/
+  /*text-align: center;*/
+  /*margin: 2px;*/
+/*}*/
 
+/*.container {*/
+  /*background-color: lightyellow;*/
+/*}*/
+
+/*.container p {*/
+  /*margin: 5px;*/
+  /*background-color: #ccc;*/
+  /*border-radius: 10px;*/
+  /*padding: 10px;*/
+/*}*/
+
+/*.container .photo img {*/
+   /*width: 500px;*/
+/*}*/
+
+/*.container a {*/
+  /*font-size: 50px;*/
+  /*text-decoration: none;*/
+  /*color: orange;*/
+  /*margin: 185px;*/
+/*}*/
+
+/*.container a:hover {*/
+  /*color: blue;*/
+/*}*/
+
+/*.container li {*/
+  /*font-size: 25px;*/
+/*}*/
+/*.container p {*/
+  /*font-size: 20px;*/
+/*}*/
 

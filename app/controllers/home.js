@@ -16,12 +16,15 @@ exports.create = function(req, res){
   });
 };
 
-exports.remove = function (req, res){
+exports.remove = function(req, res){
     //console.log(req.params.id);
-  Recipe.removeById(req.params.id, function (err){
-    res.redirect('/');
+  Recipe.removeById(req.params.id, function(err){
+    res.send({id:req.params.id});
+     //res.redirect('/');
   });
 };
+
+
 //exports.remove = function(req, res){
   //Recipe.removeById({_id: req.params.id}, function(err){
     //if(!err){

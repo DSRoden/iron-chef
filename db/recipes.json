@@ -3,14 +3,18 @@
   "name":"bbq",
   "photo":"http://s2.hubimg.com/u/1658651_f520.jpg",
   "ingredients":["chicken", "bbq", "water"],
-  "instructions":"Cook for three hours"
+  "instructions":"Cook for three hours",
+  "date": "1",
+  "category": "vegetarian"
 }
 {
   "_id":{"$oid":"000000000000000000000002"},
   "name":"http://www.slenderchoiceblog.com/wp-content/uploads/2013/05/Chicken-Tikka-Masala1.jpg",
   "photo":"http://images.com/bob.jp", 
   "ingredients":["chicken", "tikka", "cream"],
-  "instructions":"Prep chicken then put in cream"
+  "instructions":"Prep chicken then put in cream",
+  "date": "2",
+  "category": "carnivore"
 }
 
 {
@@ -18,5 +22,7 @@
   "name":"salad",
   "photo":"http://www.cicispizza.com/images/mobile-template/salad.jpg", 
   "ingredients":["tomatoes", "cucumbers", "lemon"],
-  "instructions":"Dice vegetables and mix"
+  "instructions":"Dice vegetables and mix",
+  "date": "3",
+  "category": "carnivore"
 }
